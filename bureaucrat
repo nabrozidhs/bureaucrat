@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var child_process = require('child_process');
+
+function help() {
+  return 'Usage: bureaucrat <FILE_REGEX> <TASK>'
+}
+
+if (process.argv.length != 4) {
+  console.log(help());
+  process.exit(1);
+}
+
+var regex = new RegExp(process.argv[2]);
+var task = process.argv[3];
+
+fs.watch('.', {persistent: true, recursive: true}, function(event, filename) {
+  if (event == 'change' && filename.match(regex) != null) {
+    console.log('running');
+    child_process.exec(task, function(error, stdout, stderr) {
+      if (error == null) {
+        console.log('Success!');
+      } else {
+        console.log('Failure!');
+        console.log(stderr);
+      }
+    });
+  }
+});
