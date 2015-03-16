@@ -1,5 +1,5 @@
 # bureaucrat
-![Bureaucrat hero image](https://github.com/nabrozidhs/bureaucrat/hero.png)
+![Bureaucrat hero image](https://raw.githubusercontent.com/nabrozidhs/bureaucrat/master/hero.png)
 
 ## Kudos
 
