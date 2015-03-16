@@ -1,5 +1,6 @@
 # bureaucrat
+![Bureaucrat hero image](https://github.com/nabrozidhs/bureaucrat/hero.png)
 
-## Dependencies
+## Kudos
 
-- `node` >= `0.12.0`
+Using code from [yuanchuan](https://github.com/yuanchuan/node-watch).
